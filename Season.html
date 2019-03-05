@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Season - Traveling Japan</title>
+      <STYLE type='text/css'>
+        #box1{
+          width: 400px;
+          height: 400px;
+          position: absolute;
+          left: 35%;
+          top: 10%;
+          background-color: rgba(20, 20, 20, 0);
+          border: solid white 10px;
+          z-index: 2;
+        }
+        #middle1{
+        	position:absolute;
+        	z-index:2;
+        	top:140%;
+        	left:35%;
+        	opacity:1;
+        }
+        #middle2{
+        	position:absolute;
+        	z-index:2;
+        	top:200%;
+        	left:35%;
+        	opacity:1;
+        }
+        #logo{
+          position:absolute;
+          z-index:2;
+          left:21%;
+          top:2%;
+        }
+        #banner{
+        	position: absolute;
+        	top:100%;
+        	left:30px;
+        }
+        #springtext{
+        	position:absolute;
+        	background-color:black;
+        	opacity:0.5;
+        	z-index:2;
+        	top:140%;
+        	left:30px;
+        	width:400px;
+        	height:400px;
+        }
+        #summertext{
+        	position:absolute;
+        	background-color:black;
+        	opacity:0.5;
+        	z-index:2;
+        	top:140%;
+        	left:68%;
+        	width:400px;
+        	height:400px;
+        }
+        #autumntext{
+        	position:absolute;
+        	background-color:black;
+        	opacity:0.5;
+        	z-index:2;
+        	top:200%;
+        	left:30px;
+        	width:400px;
+        	height:400px;
+        }
+        #wintertext{
+        	position:absolute;
+        	background-color:black;
+        	opacity:0.5;
+        	z-index:2;
+        	top:200%;
+        	left:68%;
+        	width:400px;
+        	height:400px;
+        }
+        #box7{
+          width:1400px;
+          height:350px;
+          position: absolute;
+          background-color: black ;
+          opacity:0.5;
+          left: 0%;
+          top: 300%;
+          z-index: 2;
+        }
+        #bg{
+          width:101%;
+          height:101%;
+          position:fixed;
+          left:-1%;
+          top:-1%;
+          z-index:-1;
+       }
+      </STYLE>
+      <script type = "text/javascript">
+          var selected=0;
+
+          function displayNextImage() {
+              selected=(selected+1)%6;
+              if(selected==0)
+              {
+                button1.src='active.png';
+                button2.src='inactive.png';
+                button3.src='inactive.png';
+                button4.src='inactive.png';
+                button5.src='inactive.png';
+                button6.src='inactive.png';
+              }
+              else if(selected==1)
+              {
+                button1.src='inactive.png';
+                button2.src='active.png';
+                button3.src='inactive.png';
+                button4.src='inactive.png';
+                button5.src='inactive.png';
+                button6.src='inactive.png';
+              }
+              else if(selected==2)
+              {
+                button1.src='inactive.png';
+                button2.src='inactive.png';
+                button3.src='active.png';
+                button4.src='inactive.png';
+                button5.src='inactive.png';
+                button6.src='inactive.png';
+              }
+              else if(selected==3)
+              {
+                button1.src='inactive.png';
+                button2.src='inactive.png';
+                button3.src='inactive.png';
+                button4.src='active.png';
+                button5.src='inactive.png';
+                button6.src='inactive.png';
+              }
+              else if(selected==4)
+              {
+                button1.src='inactive.png';
+                button2.src='inactive.png';
+                button3.src='inactive.png';
+                button4.src='inactive.png';
+                button5.src='active.png';
+                button6.src='inactive.png';
+              }
+              else if(selected==5)
+              {
+                button1.src='inactive.png';
+                button2.src='inactive.png';
+                button3.src='inactive.png';
+                button4.src='inactive.png';
+                button5.src='inactive.png';
+                button6.src='active.png';
+              }
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 2000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "Winterbigpic3.jpg";
+          images[1] = "Winterbigpic2.jpg";
+          images[2] = "summerbigpic.jpeg";
+          images[3] = "fallbigpic.jpg";
+          images[4] = "springbigpic.jpg";
+          images[5] = "Winterbigpic.jpg";
+  </script>
+</head>
+<BODY>
+  <IMG src='bg.jpg' id='bg'></IMG>
+  <CENTER>
+    <DIV id='box1' style = "font-size: 95px; color: #FEFDFE; font-family: 'futura';">-       SEASON       -</DIV>
+  </CENTER>
+  <CENTER>
+    <TABLE>
+      <TR>
+        <TD>
+          <IMG width='260'src='springfood.jpeg' onmouseover= "src='springfood2.jpg'; "onmouseout="src='springfood.jpeg';"></IMG>
+        </TD>
+        <TD rowspan='2'>
+          <body onload = "startTimer(60)"> <img name= 'bigpic' id="img" src="Winterbigpic.jpg"/>
+        </TD>
+        <TD>
+          <IMG width='260'src='summerfood.jpg' onmouseover= "src='summerfood2.jpg'; "onmouseout="src='summerfood.jpg';"></IMG>
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+         <IMG width='260'src='fallfood.jpg' onmouseover= "src='fallfood2.jpg'; "onmouseout="src='fallfood.jpg';"></IMG>
+        </TD>
+        <TD>
+         <IMG width='260'src='winterfood.jpg' onmouseover= "src='winterfood2.jpg'; "onmouseout="src='winterfood.jpg';"></IMG>
+       </TD>
+    </TR>
+  <TABLE>
+</CENTER>
+  <TR>
+      <TD>
+        <IMG name='button1' src='active.png' width=20 onclick="src='active.png';button2.src='inactive.png';button3.src='inactive.png';button4.src='inactive.png';button5.src='inactive.png';button6.src='inactive.png';bigpic.src='Winterbigpic.jpg';"></IMG>
+      </TD>
+      <TD>
+        <IMG name='button2' src='inactive.png' width=20 onclick="src='active.png';button1.src='inactive.png';button3.src='inactive.png';button4.src='inactive.png';button5.src='inactive.png';button6.src='inactive.png';bigpic.src='Winterbigpic3.jpg';"></IMG>
+      </TD>
+      <TD>
+        <IMG name='button3' src='inactive.png' width=20 onclick="src='active.png';button1.src='inactive.png';button2.src='inactive.png';button4.src='inactive.png';button5.src='inactive.png';button6.src='inactive.png';bigpic.src='Winterbigpic2.jpg';"></IMG>
+      </TD>
+      <TD>
+        <IMG name='button4' src='inactive.png' width=20 onclick="src='active.png';button1.src='inactive.png';button2.src='inactive.png';button3.src='inactive.png';button5.src='inactive.png';button6.src='inactive.png';bigpic.src='summerbigpic.jpeg';"></IMG>
+      </TD>
+      <TD>
+        <IMG name='button5' src='inactive.png' width=20 onclick="src='active.png';button1.src='inactive.png';button2.src='inactive.png';button3.src='inactive.png';button4.src='inactive.png';button6.src='inactive.png';bigpic.src='fallbigpic.jpg';"></IMG>
+      </TD>
+      <TD>
+        <IMG name='button6' src='inactive.png' width=20 onclick="src='active.png';button1.src='inactive.png';button2.src='inactive.png';button3.src='inactive.png';button4.src='inactive.png';button5.src='inactive.png';bigpic.src='springbigpic.jpg'"></IMG>
+      </TD>
+    </TR>
+  </TABLE>
+  <img id='logo' width='100'src="JapanLogo.png">
+  <DIV id='box7'></DIV>
+  <TABLE id='banner'>
+  	<TR>
+  		<TD><img width='325' src='Seasonsubspring.jpg'></img></TD>
+  		<TD><img width='325' src='Seasonsubsummer.jpg'></img></TD>
+  		<TD><img width='325' src='Seasonsubautumn.jpeg'></img></TD>
+  		<TD><img width='325' src='Seasonsubwinter.jpg'></img></TD>
+  	</TR>
+  </TABLE>
+  <DIV id='springtext' style="font-size: 20px; color: #FEFDFE; font-family: 'futura';">
+  	<BR>
+  	<BR>
+  	<BR>
+  	Spring is the best time to visit Japan, with mild weather and cherry blossoming (sakura 桜). The cherry-blossom opens from the south to north of Japan. Golden Week, the concentration of national holidays at the end of April and the first week of May may be the busiest season, so it’s probably best to avoided
+  </DIV>
+  <DIV id='summertext' style="font-size: 20px; color: #FEFDFE; font-family: 'futura';">
+  	<BR>
+  	<BR>
+  	<BR>
+  	The summer in Japan is really hot. The only places that it may be cold are probably the mountains and the northern island of Hokkaido. June is usually the rainy season (梅雨) for most of the country, but Hokkaido misses out the raining season as well, so so it’s a good time to visit hokkaido.
+  </DIV>
+  <DIV id='autumntext' style="font-size: 20px; color: #FEFDFE; font-family: 'futura';">
+  	<BR>
+  	<BR>
+  	<BR>
+  	September is the time of year which typhoons may form and come to Japan. After that, the weather is generally mild, but may also be a little unpredictable. Even though september isn’t a good season, october is a good time for travelling. The trees show beautiful autumn colours, red, orange and gives a beautiful view that presents Japan itself.
+  </DIV>
+  <DIV id='wintertext' style="font-size: 20px; color: #FEFDFE; font-family: 'futura';">
+  	<BR>
+  	<BR>
+  	<BR>
+  	Many people visits hokkaido in december to february to ski and and snowboard. Winter illumination is the most popular sites during winter. This events are held across the country. Some events end after Christmas but most of them continue through the whole winter.
+  </DIV>
+  <IMG width='400' src='middlespring.jpg' id='middle1'></IMG>
+  <IMG src='middlewinter.jpg' id='middle2'></IMG>
+</Body>
+</html>
